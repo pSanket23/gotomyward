@@ -17,7 +17,7 @@ node('master'){
 	
 	stage('Build'){
 	  
-	  sh 'sudo npm install'
+	  sh 'npm install'
 	  sh 'ng build'
     }
 	
