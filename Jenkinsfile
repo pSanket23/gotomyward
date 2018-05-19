@@ -2,7 +2,7 @@ node('master'){
    
     stage('Clear Workspace'){
 	  echo "Clear Workspace"
-      deleteDir()
+    //  deleteDir()
     }
 	
 	stage('Checkout'){
@@ -17,7 +17,7 @@ node('master'){
 	
 	stage('Build'){
 	  
-	  sh 'npm install'
+	  sh 'sudo npm install'
 	  sh 'ng build'
     }
 	
