@@ -2,7 +2,7 @@ node('master'){
    
     stage('Clear Workspace'){
 	  echo "Clear Workspace"
-    //  deleteDir()
+      deleteDir()
     }
 	
 	stage('Checkout'){
