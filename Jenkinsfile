@@ -9,4 +9,11 @@ node('master'){
 	  echo "Cloning Git Repository"
       checkout scm
     }
+	
+	stage('Test Mail'){
+	  echo "sending a test mail"
+      emailext body: 'This is a test mail', subject: 'Test mail', to: 'sanketpethkar23@gmail.com'
+    }
+	
+	
 }
