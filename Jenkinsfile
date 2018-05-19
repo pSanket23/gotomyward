@@ -15,5 +15,10 @@ node('master'){
       emailext body: 'This is a test mail', subject: 'Test mail', to: 'sanketpethkar23@gmail.com'
     }
 	
+	stage('Build'){
+	  
+	  sh 'npm install'
+	  sh 'ng build'
+    }
 	
 }
