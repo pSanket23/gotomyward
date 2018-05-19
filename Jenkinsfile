@@ -18,7 +18,7 @@ node('master'){
 	stage('Build'){
 	  
 	  sh 'npm install'
-	  sh 'ng build'
+	  sh 'ng build --prod --extract-css false'
     }
 	
 }
