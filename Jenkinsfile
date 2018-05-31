@@ -10,9 +10,9 @@ node('master'){
       checkout scm
     }
 	
-	stage('Test Mail'){
+	stage('Notify build is started'){
 	  echo "sending a test mail"
-      emailext body: 'This is a test mail', subject: 'Test mail', to: 'sanketpethkar23@gmail.com'
+      emailext body: 'Build started', subject: 'Build started', to: 'sanketpethkar23@gmail.com'
     }
 	
 	stage('Build'){
@@ -34,6 +34,11 @@ node('master'){
 	 // sh 'npm install'
 	 // sh 'ng build --prod --extract-css false'
     echo "The deployment is successful !!!!"
+    }
+  
+  stage('Notify build status'){
+	  echo "sending a test mail"
+      emailext body: 'Build Status', subject: 'Build Status', to: 'sanketpethkar23@gmail.com'
     }
 	
 }
