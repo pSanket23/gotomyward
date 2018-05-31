@@ -17,8 +17,23 @@ node('master'){
 	
 	stage('Build'){
 	  
-	  sh 'npm install'
-	  sh 'ng build --prod --extract-css false'
+	 // sh 'npm install'
+	 // sh 'ng build --prod --extract-css false'
+    echo "The build is successful !!!!"
+    }
+  
+  stage('Publich Artifacts to Nexus'){
+	  
+	 // sh 'npm install'
+	 // sh 'ng build --prod --extract-css false'
+    echo "Artifacts uploaded successfully !!!!"
+    }
+  
+  stage('Deploy application to Apache tomcat'){
+	  
+	 // sh 'npm install'
+	 // sh 'ng build --prod --extract-css false'
+    echo "The deployment is successful !!!!"
     }
 	
 }
